@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap");
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 400px;
+  height: 700px;
+  border: 10px double #0177F8;
+  border-radius: 30px;
+  font-family: "Darker Grotesque", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  box-shadow: rgba(85, 77, 77, 0.801) 5px 5px 5px;
+}
+.container .question {
+  align-items: center;
+  width: 325px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: transparent;
+  margin: 0 auto;
+  color: white;
+}
+.container .question h1 {
+  color: #2b9348;
+  background-color: transparent;
+  border-radius: 30px;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+.container .question h2 {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 100px;
+  background: -webkit-linear-gradient(#2b9348, #0086FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container .functionality {
+  background-color: transparent;
+  border-radius: 20px;
+  width: 380px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.container .functionality .question_btns {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  border: none;
+  border-radius: 30px;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  padding: 0px;
+  opacity: 1;
+}
+.container .functionality button {
+  margin: 10px;
+  font-family: "Darker Grotesque", sans-serif;
+  color: #C36F25;
+  justify-content: space-between;
+  border: 2px solid #C36F25;
+  font-size: 30px;
+  font-weight: bolder;
+  border-radius: 20px;
+  width: 300px;
+  height: 55px;
+  background-color: transparent;
+  opacity: 1;
+}
+.container .functionality button:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #C36F25;
+  color: white;
+}
+.container .functionality .reset {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.container .functionality .next {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.container .functionality .before {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
