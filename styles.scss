@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 * {
     margin: 0 auto;
     box-sizing: border-box;
@@ -8,13 +8,15 @@
     width: 400px;
     height: 700px;
     border-radius: 30px;
-    font-family: 'Darker Grotesque', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: white;
     background-image: url("backgroundimage.png");
+    background-size: contain;
     box-shadow: rgba(85, 77, 77, 0.801) 5px 5px 5px;
     .question {
         align-items: center;
@@ -63,7 +65,8 @@
     }
     button {
         margin: 10px;
-       font-family: 'Darker Grotesque', sans-serif;
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
         color: #C36F25;
         justify-content: space-between;
         border: 2px solid #C36F25;
