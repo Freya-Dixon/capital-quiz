@@ -199,49 +199,53 @@ const values = Object.values(questions);
 const keys = Object.keys(questions);
 console.log(values);
 console.log(entries);
+console.log(keys.length);
+
 
 // display question on page 
 const getQuestion = () => {
-    // forEach(let i = 0; i < value.length; i++) {
-//   
-// }
-    newQuestion.innerHTML = values[13].question;
-    icon.innerHTML = values[13].flag;
-    answers.innerHTML = values[13].capital;
-    answersTwo.innerHTML = values[13].notCapitals[2];
-    answersThree.innerHTML = values[13].notCapitals[1];
-    answersFour.innerHTML = values[13].notCapitals[0];
+    let randomNumber = Math.round(Math.random() * (29))
+    console.log(randomNumber);
+    console.log(keys[randomNumber]);
+
+
+
+    newQuestion.innerHTML = values[randomNumber].question;
+    icon.innerHTML = values[randomNumber].flag;
+    answers.innerHTML = values[randomNumber].capital;
+    answersTwo.innerHTML = values[randomNumber].notCapitals[2];
+    answersThree.innerHTML = values[randomNumber].notCapitals[1];
+    answersFour.innerHTML = values[randomNumber].notCapitals[0];
 }
 console.log(getQuestion);
+getQuestion();
 
 // event listener to display new question and answers
 nextButton.addEventListener('click', getQuestion);
-// //
-// values.forEach(element => {
-    
-// });
 
-
-//loop through array
-//https://stackoverflow.com/questions/16626735/how-to-loop-through-an-array-containing-objects-and-access-their-properties- useful link
-// forEach((element, index, array) => { ... } )
-
-
-// for(let i = 0; i < value.length; i++) {
-//   
-// }
-
-  
-// document.body.innerHTML = txt;
 
 // alert user if value = correct 
 
-ifCorrectAnswer = () => {
+// ifCorrectAnswer = () => {
+// if (values === values.capital) {
 
-}
+// }
+// else {
+
+// }
+// }
+// displayScore = () => {
+// if (values === values.capital) {
+
+// }
+// else {
+    
+// }
+// }
 
 // answers.addEventListener('click', getAnswers);
 // add event listeners to when button is clicked by user, the right return is displayed as green and the display changes to "You're correct!"
 
 
 //create reset button that returns back to start of game 
+
