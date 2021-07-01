@@ -157,7 +157,7 @@ const questions = {
         notCapitals: ["Kaunas", "Alytus", "Panevėžys"]
     },
     "democratic republic of congo": {
-        question: "The capital city of Democractic Republic of Congo is..",
+        question: "The capital city of DRC is..",
         flag: "󠁧󠁢󠁥󠁮󠁧🇨🇩",
         capital: "Kinshasa",
         notCapitals: ["Kisangani", "Goma", "Bukavu"]
