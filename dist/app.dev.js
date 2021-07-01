@@ -215,19 +215,14 @@ var getQuestion = function getQuestion() {
 console.log(getQuestion);
 getQuestion(); // event listener to display new question and answers
 
-nextButton.addEventListener('click', getQuestion); // alert user if value = correct 
-// ifCorrectAnswer = () => {
-// if (values === values.capital) {
-// }
-// else {
-// }
-// }
-// displayScore = () => {
-// if (values === values.capital) {
-// }
-// else {
-// }
-// }
-// answers.addEventListener('click', getAnswers);
+nextButton.addEventListener('click', getQuestion); // alert user if value = capital or value = notCapitals by changing the colour. Element should return green if correct and red if incorrect. Bonus, add icon that displays a tick or cross after
+
+ifCorrectAnswer = function ifCorrectAnswer() {
+  if (values === values.capital) {
+    document.querySelector('.btn').style.color = "green";
+  }
+};
+
+ifCorrectAnswer(); // answers.addEventListener('click', getAnswers);
 // add event listeners to when button is clicked by user, the right return is displayed as green and the display changes to "You're correct!"
 //create reset button that returns back to start of game
