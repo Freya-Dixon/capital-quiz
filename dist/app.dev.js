@@ -14,7 +14,9 @@ console.log(answersThree);
 var nextButton = document.querySelector('.next');
 console.log(nextButton);
 var icon = document.querySelector('.icon');
-console.log(icon); // object data 
+console.log(icon);
+var points = document.querySelector('.pointTotal');
+console.log(points); // object data 
 
 var questions = {
   "england": {

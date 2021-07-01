@@ -13,7 +13,8 @@ const nextButton = document.querySelector('.next')
 console.log(nextButton);
 const icon = document.querySelector('.icon')
 console.log(icon);
-
+const points = document.querySelector('.pointTotal')
+console.log(points);
 // object data 
 
 const questions = {
@@ -207,8 +208,6 @@ const getQuestion = () => {
     let randomNumber = Math.round(Math.random() * (29))
     console.log(randomNumber);
     console.log(keys[randomNumber]);
-
-
 
     newQuestion.innerHTML = values[randomNumber].question;
     icon.innerHTML = values[randomNumber].flag;
