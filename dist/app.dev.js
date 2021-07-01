@@ -42,7 +42,7 @@ var questions = {
     notCapitals: ["Venice", "Milan", "Naples"]
   },
   "spain": {
-    question: "The capital city of spain is..",
+    question: "The capital city of Spain is..",
     flag: "󠁧󠁢󠁥󠁮󠁧🇪🇸",
     capital: "Madrid",
     notCapitals: ["Barcelona", "Valencia", "Selville"]

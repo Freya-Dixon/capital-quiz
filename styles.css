@@ -27,6 +27,8 @@
   border-radius: 20px;
   background-color: transparent;
   margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
   color: white;
 }
 .container .question h1 {
@@ -87,10 +89,9 @@
   color: white;
 }
 .container .functionality .reset {
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 30px;
   width: 50px;
   height: 50px;
   border: none;
@@ -98,10 +99,9 @@
   background-color: transparent;
 }
 .container .functionality .next {
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 30px;
   width: 50px;
   height: 50px;
   border: none;
@@ -109,10 +109,9 @@
   background-color: transparent;
 }
 .container .functionality .before {
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 30px;
   width: 50px;
   height: 50px;
   border: none;
