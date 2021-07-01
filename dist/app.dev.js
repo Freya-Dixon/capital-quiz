@@ -98,7 +98,7 @@ var questions = {
   "argentina": {
     question: "The capital city of Argentina is..",
     flag: "󠁧󠁢󠁥󠁮󠁧🇦🇷",
-    capital: "Buenos Aries",
+    capital: "Buenos Aires",
     notCapitals: ["Rio Grande", "Cordoba", "Rosario"]
   },
   "sweden": {
@@ -203,18 +203,20 @@ var getQuestion = function getQuestion() {
   // forEach(let i = 0; i < value.length; i++) {
   //   
   // }
-  newQuestion.innerHTML = values[9].question;
-  icon.innerHTML = values[9].flag;
-  answers.innerHTML = values[9].capital;
-  answersTwo.innerHTML = values[9].notCapitals[2];
-  answersThree.innerHTML = values[9].notCapitals[1];
-  answersFour.innerHTML = values[9].notCapitals[0];
+  newQuestion.innerHTML = values[13].question;
+  icon.innerHTML = values[13].flag;
+  answers.innerHTML = values[13].capital;
+  answersTwo.innerHTML = values[13].notCapitals[2];
+  answersThree.innerHTML = values[13].notCapitals[1];
+  answersFour.innerHTML = values[13].notCapitals[0];
 };
 
 console.log(getQuestion); // event listener to display new question and answers
 
-nextButton.addEventListener('click', getQuestion);
-values.forEach(function (element) {}); //loop through array
+nextButton.addEventListener('click', getQuestion); // //
+// values.forEach(element => {
+// });
+//loop through array
 //https://stackoverflow.com/questions/16626735/how-to-loop-through-an-array-containing-objects-and-access-their-properties- useful link
 // forEach((element, index, array) => { ... } )
 // for(let i = 0; i < value.length; i++) {
