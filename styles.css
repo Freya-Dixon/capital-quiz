@@ -20,7 +20,7 @@
   box-shadow: rgba(85, 77, 77, 0.801) 5px 5px 5px;
 }
 .container p {
-  font-family: "Londrina Shadow", cursive;
+  font-family: "Varela", sans-serif;
   font-size: 40px;
   font-weight: 1000;
   color: #629925;
@@ -34,7 +34,6 @@
   margin: 0 auto;
   margin-bottom: 10px;
   margin-top: 10px;
-  color: white;
 }
 .container .question h1 {
   color: #2b9348;
