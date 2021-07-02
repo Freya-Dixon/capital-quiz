@@ -192,7 +192,37 @@ var questions = {
     flag: "󠁧󠁢󠁥󠁮󠁧🇲🇽",
     capital: "Mexico City",
     notCapitals: ["Wahaca", "Guadalajara", "Cancún"]
-  }
+  } // //    "finland": {
+  //     question: "The capital city of Finland is..",
+  // flag: "󠁧󠁢󠁥󠁮󠁧🇫🇮",
+  //     capital: "Helsinki",
+  //     notCapitals: ["Alavus", "Huittinen", "Äänekoski"]
+  // },
+  // //    "ethiopia": {
+  //     question: "The capital city of Ethiopia is..",
+  // flag: "󠁧󠁢󠁥󠁮󠁧🇪🇹",
+  //     capital: "Addis Ababa",
+  //     notCapitals: ["Mek'ele", "Gondar", "Harar"]
+  // },
+  // //    "micronesia": {
+  //     question: "The capital city of Micronesia is..",
+  // flag: "󠁧󠁢󠁥󠁮󠁧🇫🇲",
+  //     capital: "Palikir",
+  //     notCapitals: ["Tofol", "Colonia", "Tafunsak"]
+  // },
+  // //    "grenada": {
+  //     question: "The capital city of Grenada is..",
+  // flag: "󠁧󠁢󠁥󠁮󠁧🇬🇩",
+  //     capital: "Saint George's",
+  //     notCapitals: ["Victoria", "Sauteurs", "Chantimelle"]
+  // },
+  // //    "honduras": {
+  //     question: "The capital city of Honduras is..",
+  // flag: "󠁧󠁢󠁥󠁮󠁧🇭🇳",
+  //     capital: "Tegucigalpa",
+  //     notCapitals: ["La Ceiba", "Choloma", "Choluteca"]
+  // },
+
 };
 console.log(questions);
 var entries = Object.entries(questions);
@@ -200,7 +230,14 @@ var values = Object.values(questions);
 var keys = Object.keys(questions);
 console.log(values);
 console.log(entries);
-console.log(keys.length); // display question on page 
+console.log(keys.length);
+
+var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
+  if (e.target.innerHTML === values[randNumber].capital) {
+    answers.style.backgroundColor = "green";
+  } else answersTwo.style.backgroundColor = "red";
+}; // display question on page 
+
 
 var getQuestion = function getQuestion() {
   var randomNumber = Math.round(Math.random() * 29);
@@ -212,20 +249,21 @@ var getQuestion = function getQuestion() {
   answersTwo.innerHTML = values[randomNumber].notCapitals[2];
   answersThree.innerHTML = values[randomNumber].notCapitals[1];
   answersFour.innerHTML = values[randomNumber].notCapitals[0];
+  answers.addEventListener('click', function (e) {
+    return ifAnswerCorrect(e, randomNumber);
+  });
+  answersTwo.addEventListener('click', function (e) {
+    return ifAnswerCorrect(e, randomNumber);
+  });
+  answersThree.addEventListener('click', function (e) {
+    return ifAnswerCorrect(e, randomNumber);
+  });
+  answersFour.addEventListener('click', function (e) {
+    return ifAnswerCorrect(e, randomNumber);
+  });
 };
 
 console.log(getQuestion);
 getQuestion(); // event listener to display new question and answers
 
 nextButton.addEventListener('click', getQuestion); // alert user if value = capital or value = notCapitals by changing the colour. Element should return green if correct and red if incorrect. Bonus, add icon that displays a tick or cross after
-
-var ifAnswerCorrect = function ifAnswerCorrect(e) {
-  if (e.target.innerHTML = values.capital) {
-    alert("answer is correct");
-  } else alert("answer not correct");
-};
-
-answers.addEventListener('click', ifAnswerCorrect);
-answersTwo.addEventListener('click', ifAnswerCorrect);
-answersThree.addEventListener('click', ifAnswerCorrect);
-answersFour.addEventListener('click', ifAnswerCorrect);
