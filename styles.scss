@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+@import "_variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
 * {
     margin: 0 auto;
     box-sizing: border-box;
@@ -9,13 +9,11 @@
     width: 400px;
     height: 710px;
     border-radius: 30px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+    font-family: $prm-font;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
     background-image: url("backgroundimage.png");
     background-size: contain;
     box-shadow: rgba(85, 77, 77, 0.801) 5px 5px 5px;
@@ -74,7 +72,7 @@
     }
     button {
         margin: 10px;
-        font-family: 'Raleway', sans-serif;
+        font-family: $prm-font;
         font-weight: bold;
         color: #C36F25;
         justify-content: space-between;
