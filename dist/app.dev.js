@@ -234,8 +234,12 @@ console.log(keys.length);
 
 var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
   if (e.target.innerHTML === values[randNumber].capital) {
-    answers.style.backgroundColor = "green";
-  } else answersTwo.style.backgroundColor = "red";
+    answers.classList.remove('');
+  } else //reference the two class lists created in css
+    answersTwo.style.backgroundColor = "red";
+
+  answersThree.style.backgroundColor = "red";
+  answersFour.style.backgroundColor = "red";
 }; // display question on page 
 
 

@@ -234,10 +234,12 @@ console.log(keys.length);
 
 const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
-        answers.style.backgroundColor = "green"
+        answers.classList.remove('')
     } else 
+    //reference the two class lists created in css
     answersTwo.style.backgroundColor  = "red"
-   
+    answersThree.style.backgroundColor  = "red"
+    answersFour.style.backgroundColor  = "red"
 }
 
 
