@@ -50,15 +50,7 @@
   margin-bottom: 20px;
   font-size: 100px;
 }
-.container .functionality {
-  background-color: transparent;
-  border-radius: 20px;
-  width: 380px;
-  height: 300px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-.container .functionality .question_btns {
+.container .question_btns {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
@@ -70,7 +62,7 @@
   padding: 0px;
   opacity: 1;
 }
-.container .functionality button {
+.container button {
   margin: 10px;
   font-family: "Varela", sans-serif;
   font-weight: bold;
@@ -85,47 +77,50 @@
   background-color: transparent;
   opacity: 1;
 }
-.container .functionality button:hover {
+.container button:hover {
   opacity: 0.6;
   transition: 0.3s;
   cursor: pointer;
   background-color: #C36F25;
   color: white;
 }
-.container .functionality button .correctButton {
+.container button .correctButton {
   color: white;
   background-color: #9AAD58;
   border: 2px solid #9AAD58;
 }
-.container .functionality button .incorrectButton {
+.container button .incorrectButton {
   color: white;
   background-color: #B02E29;
   border: 2px solid #B02E29;
 }
-.container .functionality .reset {
+.container .reset__game--btn {
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 30px;
+  font-family: "Varela", sans-serif;
   width: 50px;
   height: 50px;
   border: none;
   border-radius: 50%;
   background-color: transparent;
 }
-.container .functionality .next {
+.container .next__question--btn {
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 30px;
+  font-family: "Varela", sans-serif;
   width: 50px;
   height: 50px;
   border: none;
   border-radius: 50%;
   background-color: transparent;
 }
-.container .functionality .before {
+.container .previous__question--btn {
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 30px;
+  font-family: "Varela", sans-serif;
   width: 50px;
   height: 50px;
   border: none;
