@@ -243,7 +243,7 @@ const questions = {
         notCapitals: ["Valparaíso", "Viña del Mar", "Iquique"]
     },
             "syria": {
-        question: "The capital city of Honduras is..",
+        question: "The capital city of Syria is..",
         flag: "󠁧󠁢󠁥󠁮󠁧🇸🇾",
         capital: "Damascus",
         notCapitals: ["Aleppo", "Homs", "As-Suwayda"]
@@ -263,7 +263,7 @@ const questions = {
             "malawi": {
         question: "The capital city of Malawi is..",
         flag: "󠁧󠁢󠁥󠁮󠁧🇲🇼",
-        capital: "Lilongwea",
+        capital: "Lilongwe",
         notCapitals: ["Blantyre", "Mangochi", "Balaka Township"]
     },
             "oman": {
@@ -305,9 +305,9 @@ let score = 0;
 // change question button if answer correct
 const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
-        answers.classList.remove('container')
+        answers.removeAttribute("style")
         answers.classList.add('correctButton')
-       points.innerHTML = ++score;
+        points.innerHTML = ++score;
         
     } else 
     //reference the two class lists created in css
@@ -315,6 +315,7 @@ const ifAnswerCorrect = (e,randNumber) => {
     answersThree.classList.add('incorrectButton')
     answersFour.classList.add('incorrectButton')
 }
+// setInterval(ifAnswerCorrect, 3000);
 
 // display question on page 
 const getQuestion = () => {
@@ -326,8 +327,8 @@ const getQuestion = () => {
     icon.innerHTML = values[randomNumber].flag;
     answers.innerHTML = values[randomNumber].capital;
     answersTwo.innerHTML = values[randomNumber].notCapitals[2];
-    answersThree.innerHTML = values[randomNumber].notCapitals[1];
-    answersFour.innerHTML = values[randomNumber].notCapitals[0];
+    answersThree.innerHTML = values[randomNumber].notCapitals[0];
+    answersFour.innerHTML = values[randomNumber].notCapitals[1];
 
 answers.addEventListener('click',(e)=>ifAnswerCorrect(e,randomNumber));
 answersTwo.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
@@ -339,7 +340,7 @@ getQuestion();
 
 // event listener to display new question and answers
 nextButton.addEventListener('click', getQuestion);
-
+window.setInterval(getQuestion, 5000);
 
 
 // clear output and return to start 
