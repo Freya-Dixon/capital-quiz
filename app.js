@@ -286,7 +286,7 @@ const questions = {
     },
                 "kuwait": {
         question: "The capital city of Kuwait is..",
-        flag: "󠁧󠁢󠁥󠁮󠁧",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇰🇼",
         capital: "Kuwait City",
         notCapitals: ["Doha", "Failaka", "Jahra"]
     },
@@ -347,6 +347,7 @@ const resetGame = () => {
     newQuestion.innerHTML = 'Capital Quiz';
     icon.innerHTML = '🌎';
     points.innerHTML = '0';
+    score = 0;
     answers.innerHTML = 'Answer the correct capital by pressing the option buttons';
     answersTwo.innerHTML = '';
     answersThree.innerHTML = 'Reset the game by pressing the start button at bottom of page';

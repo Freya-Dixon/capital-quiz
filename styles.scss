@@ -48,7 +48,7 @@
     .question_btns {
         flex-direction: row;
         justify-content: space-between;
-        margin: 0 auto;
+        margin-bottom: 20px;
         border: none;
         border-radius: 30px;
         background-color:  $background-color;
@@ -58,7 +58,7 @@
         opacity: 1;
     }
     button {
-        margin: 10px;
+        margin-top: 20px;
         font-family: $prm-font;
         font-weight: bold;
         color: $sec-font-color;
