@@ -299,6 +299,9 @@ console.log(values);
 console.log(entries);
 console.log(keys.length);
 
+
+// a new score variable
+let score = 0;
 // change question button if answer correct
 const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
@@ -312,13 +315,10 @@ const ifAnswerCorrect = (e,randNumber) => {
     answersThree.classList.add('incorrectButton')
     answersFour.classList.add('incorrectButton')
 }
-// a new score variable
-let score = 0;
-
 
 // display question on page 
 const getQuestion = () => {
-    let randomNumber = Math.round(Math.random() * (29))
+    let randomNumber = Math.round(Math.random() * (44))
     console.log(randomNumber);
     console.log(keys[randomNumber]);
 

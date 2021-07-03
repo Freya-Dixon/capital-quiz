@@ -296,7 +296,9 @@ var values = Object.values(questions);
 var keys = Object.keys(questions);
 console.log(values);
 console.log(entries);
-console.log(keys.length); // change question button if answer correct
+console.log(keys.length); // a new score variable
+
+var score = 0; // change question button if answer correct
 
 var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
   if (e.target.innerHTML === values[randNumber].capital) {
@@ -308,13 +310,11 @@ var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
 
   answersThree.classList.add('incorrectButton');
   answersFour.classList.add('incorrectButton');
-}; // a new score variable
+}; // display question on page 
 
-
-var score = 0; // display question on page 
 
 var getQuestion = function getQuestion() {
-  var randomNumber = Math.round(Math.random() * 29);
+  var randomNumber = Math.round(Math.random() * 44);
   console.log(randomNumber);
   console.log(keys[randomNumber]);
   newQuestion.innerHTML = values[randomNumber].question;
