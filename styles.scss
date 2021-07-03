@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("backgroundimage2.png");
+    background-image: url("backgroundimage.png");
     background-size: contain;
     box-shadow: rgba(85, 77, 77, 0.801) 5px 5px 5px;
     p {
@@ -81,16 +81,16 @@
             background-color: $sec-font-color;
             color: white;
         }
-        .correctButton {
-            color: white;
-            background-color: #9AAD58;
-            border: 2px solid #9AAD58;
-        }
-        .incorrectButton {
-            color: white;
-            background-color: #B02E29;
-            border: 2px solid #B02E29;
-        }
+    }
+    .correctButton {
+        color: white;
+        background-color: #9AAD58;
+        border: 2px solid #9AAD58;
+    }
+    .incorrectButton {
+        color: white;
+        background-color: #B02E29;
+        border: 2px solid #B02E29;
     }
     .reset__game--btn {
         margin-top: 5px;

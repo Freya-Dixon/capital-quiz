@@ -9,6 +9,10 @@ const answersThree = document.querySelector('.btn__three')
 console.log(answersThree);
 const answersFour = document.querySelector('.btn__four')
 console.log(answersThree);
+const wrongAnswer = document.getElementsByClassName('incorrectButton')
+console.log(wrongAnswer);
+const correctAnswer = document.getElementsByClassName('correctButton')
+console.log(correctAnswer);
 const nextButton = document.querySelector('.next__question--btn')
 console.log(nextButton);
 const icon = document.querySelector('.icon')
@@ -237,6 +241,7 @@ const ifAnswerCorrect = (e,randNumber) => {
         answers.classList.remove('')
     } else 
     //reference the two class lists created in css
+    answers.style.backgroundColor  = "green"
     answersTwo.style.backgroundColor  = "red"
     answersThree.style.backgroundColor  = "red"
     answersFour.style.backgroundColor  = "red"
