@@ -22,6 +22,8 @@ console.log(icon);
 var points = document.querySelector('.point__total');
 console.log(points); // object data 
 
+var reset = document.querySelector('.reset__game--btn');
+console.log(reset);
 var questions = {
   "england": {
     question: "The capital city of England is..",
@@ -238,13 +240,12 @@ console.log(keys.length);
 
 var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
   if (e.target.innerHTML === values[randNumber].capital) {
-    answers.classList.remove('');
+    answers.classList.add('correctButton');
   } else //reference the two class lists created in css
-    answers.style.backgroundColor = "green";
+    answersTwo.classList.add('incorrectButton');
 
-  answersTwo.style.backgroundColor = "red";
-  answersThree.style.backgroundColor = "red";
-  answersFour.style.backgroundColor = "red";
+  answersThree.classList.add('incorrectButton');
+  answersFour.classList.add('incorrectButton');
 }; // display question on page 
 
 
@@ -276,3 +277,11 @@ console.log(getQuestion);
 getQuestion(); // event listener to display new question and answers
 
 nextButton.addEventListener('click', getQuestion); // alert user if value = capital or value = notCapitals by changing the colour. Element should return green if correct and red if incorrect. Bonus, add icon that displays a tick or cross after
+// clear output and return to start 
+
+var resetGame = function resetGame() {
+  newQuestion.innerHTML = 'Capital Quiz';
+  points.innerHTML = '0';
+};
+
+reset.addEventListener('click', resetGame);
