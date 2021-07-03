@@ -281,6 +281,7 @@ nextButton.addEventListener('click', getQuestion); // alert user if value = capi
 
 var resetGame = function resetGame() {
   newQuestion.innerHTML = 'Capital Quiz';
+  icon.innerHTML = '🌎';
   points.innerHTML = '0';
 };
 

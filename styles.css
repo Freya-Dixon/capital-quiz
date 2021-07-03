@@ -25,30 +25,25 @@
   font-weight: 1000;
   color: #629925;
 }
-.container .question {
+.container .question__container {
   align-items: center;
   width: 325px;
   height: 200px;
   border-radius: 20px;
   background-color: transparent;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  font-size: 20px;
 }
-.container .question h1 {
+.container .question__container h1 {
   color: #2b9348;
   background-color: transparent;
   border-radius: 30px;
-  width: 300px;
-  height: 100px;
   margin: 0 auto;
-  margin-top: 20px;
   text-align: center;
 }
-.container .question h2 {
+.container .question__container h2 {
   margin: 0 auto;
-  margin-bottom: 20px;
-  font-size: 100px;
+  text-align: center;
+  font-size: 80px;
 }
 .container .question_btns {
   flex-direction: row;

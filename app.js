@@ -280,6 +280,7 @@ nextButton.addEventListener('click', getQuestion);
 // clear output and return to start 
 const resetGame = () => {
     newQuestion.innerHTML = 'Capital Quiz';
+    icon.innerHTML = '🌎';
     points.innerHTML = '0';
 }
 reset.addEventListener('click', resetGame);
