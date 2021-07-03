@@ -200,36 +200,96 @@ const questions = {
         capital: "Mexico City",
         notCapitals: ["Wahaca", "Guadalajara", "Cancún"]
     },
-    // //    "finland": {
-    //     question: "The capital city of Finland is..",
-        // flag: "󠁧󠁢󠁥󠁮󠁧🇫🇮",
-    //     capital: "Helsinki",
-    //     notCapitals: ["Alavus", "Huittinen", "Äänekoski"]
-    // },
-     // //    "ethiopia": {
-    //     question: "The capital city of Ethiopia is..",
-        // flag: "󠁧󠁢󠁥󠁮󠁧🇪🇹",
-    //     capital: "Addis Ababa",
-    //     notCapitals: ["Mek'ele", "Gondar", "Harar"]
-    // },
-     // //    "micronesia": {
-    //     question: "The capital city of Micronesia is..",
-        // flag: "󠁧󠁢󠁥󠁮󠁧🇫🇲",
-    //     capital: "Palikir",
-    //     notCapitals: ["Tofol", "Colonia", "Tafunsak"]
-    // },
-     // //    "grenada": {
-    //     question: "The capital city of Grenada is..",
-        // flag: "󠁧󠁢󠁥󠁮󠁧🇬🇩",
-    //     capital: "Saint George's",
-    //     notCapitals: ["Victoria", "Sauteurs", "Chantimelle"]
-    // },
-     // //    "honduras": {
-    //     question: "The capital city of Honduras is..",
-        // flag: "󠁧󠁢󠁥󠁮󠁧🇭🇳",
-    //     capital: "Tegucigalpa",
-    //     notCapitals: ["La Ceiba", "Choloma", "Choluteca"]
-    // },
+       "finland": {
+        question: "The capital city of Finland is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇫🇮",
+        capital: "Helsinki",
+        notCapitals: ["Alavus", "Huittinen", "Äänekoski"]
+    },
+        "ethiopia": {
+        question: "The capital city of Ethiopia is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇪🇹",
+        capital: "Addis Ababa",
+        notCapitals: ["Mek'ele", "Gondar", "Harar"]
+    },
+        "micronesia": {
+        question: "The capital city of Micronesia is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇫🇲",
+        capital: "Palikir",
+        notCapitals: ["Tofol", "Colonia", "Tafunsak"]
+    },
+        "grenada": {
+        question: "The capital city of Grenada is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇬🇩",
+        capital: "Saint George's",
+        notCapitals: ["Victoria", "Sauteurs", "Chantimelle"]
+    },
+        "honduras": {
+        question: "The capital city of Honduras is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇭🇳",
+        capital: "Tegucigalpa",
+        notCapitals: ["La Ceiba", "Choloma", "Choluteca"]
+    },
+            "greece": {
+        question: "The capital city of Greece is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇬🇷",
+        capital: "Athens",
+        notCapitals: ["Thessaloniki", "Nafplio", "Chania"]
+    },
+            "chile": {
+        question: "The capital city of Chile is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇨🇱",
+        capital: "Santiago",
+        notCapitals: ["Valparaíso", "Viña del Mar", "Iquique"]
+    },
+            "syria": {
+        question: "The capital city of Honduras is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇸🇾",
+        capital: "Damascus",
+        notCapitals: ["Aleppo", "Homs", "As-Suwayda"]
+    },
+            "south africa": {
+        question: "The capital city of South Africa is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇿🇦",
+        capital: "Pretoria",
+        notCapitals: ["Cape Town", "Johannesburg", "Bloemfontein"]
+    },
+            "japan": {
+        question: "The capital city of Japan is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇯🇵",
+        capital: "Toyko",
+        notCapitals: ["Kyoto", "Osaka", "Kobe"]
+    },
+            "malawi": {
+        question: "The capital city of Malawi is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇲🇼",
+        capital: "Lilongwea",
+        notCapitals: ["Blantyre", "Mangochi", "Balaka Township"]
+    },
+            "oman": {
+        question: "The capital city of Oman is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇴🇲",
+        capital: "Muscat",
+        notCapitals: ["Seeb", "Rustaq", "Nizwa"]
+    },
+                "cambodia": {
+        question: "The capital city of Cambodia is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇰🇭",
+        capital: "Phnom Penh",
+        notCapitals: ["Siem Reap", "Poipet", "Samraong"]
+    },
+                "el salvador": {
+        question: "The capital city of El Salvador is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧🇸🇻",
+        capital: "San Salvador",
+        notCapitals: ["Apopa", "Santa Ana", "Delgado"]
+    },
+                "kuwait": {
+        question: "The capital city of Kuwait is..",
+        flag: "󠁧󠁢󠁥󠁮󠁧",
+        capital: "Kuwait City",
+        notCapitals: ["Doha", "Failaka", "Jahra"]
+    },
 };
 console.log(questions);
 const entries = Object.entries(questions);
@@ -242,6 +302,7 @@ console.log(keys.length);
 // change question button if answer correct
 const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
+        answers.classList.remove('container')
         answers.classList.add('correctButton')
        points.innerHTML = ++score;
         
@@ -286,10 +347,14 @@ const resetGame = () => {
     newQuestion.innerHTML = 'Capital Quiz';
     icon.innerHTML = '🌎';
     points.innerHTML = '0';
-    answers.innerHTML = '';
+    answers.innerHTML = 'Answer the correct capital by pressing the option buttons';
     answersTwo.innerHTML = '';
-    answersThree.innerHTML = '';
-    answersFour.innerHTML = '';
+    answersThree.innerHTML = 'Reset the game by pressing the start button at bottom of page';
+    answersFour.innerHTML = 'Good luck!';
+    answers.classList.add('home--btn')
+    answersTwo.classList.add('home--btn')
+    answersThree.classList.add('home--btn')
+    answersFour.classList.add('home--btn')
 }
 reset.addEventListener('click', resetGame);
 
