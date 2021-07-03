@@ -1,19 +1,19 @@
 // set variables on html page 
-const newQuestion = document.querySelector('.display')
+const newQuestion = document.querySelector('.question')
 console.log(newQuestion);
 const answers = document.querySelector('.btn')
 console.log(answers);
-const answersTwo = document.querySelector('.btnTwo')
+const answersTwo = document.querySelector('.btn__two')
 console.log(answersTwo);
-const answersThree = document.querySelector('.btnThree')
+const answersThree = document.querySelector('.btn__three')
 console.log(answersThree);
-const answersFour = document.querySelector('.btnFour')
+const answersFour = document.querySelector('.btn__four')
 console.log(answersThree);
-const nextButton = document.querySelector('.next')
+const nextButton = document.querySelector('.next__question--btn')
 console.log(nextButton);
 const icon = document.querySelector('.icon')
 console.log(icon);
-const points = document.querySelector('.pointTotal')
+const points = document.querySelector('.point__total')
 console.log(points);
 // object data 
 

@@ -1,21 +1,21 @@
 "use strict";
 
 // set variables on html page 
-var newQuestion = document.querySelector('.display');
+var newQuestion = document.querySelector('.question');
 console.log(newQuestion);
 var answers = document.querySelector('.btn');
 console.log(answers);
-var answersTwo = document.querySelector('.btnTwo');
+var answersTwo = document.querySelector('.btn__two');
 console.log(answersTwo);
-var answersThree = document.querySelector('.btnThree');
+var answersThree = document.querySelector('.btn__three');
 console.log(answersThree);
-var answersFour = document.querySelector('.btnFour');
+var answersFour = document.querySelector('.btn__four');
 console.log(answersThree);
-var nextButton = document.querySelector('.next');
+var nextButton = document.querySelector('.next__question--btn');
 console.log(nextButton);
 var icon = document.querySelector('.icon');
 console.log(icon);
-var points = document.querySelector('.pointTotal');
+var points = document.querySelector('.point__total');
 console.log(points); // object data 
 
 var questions = {
