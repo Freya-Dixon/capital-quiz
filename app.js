@@ -251,7 +251,7 @@ const ifAnswerCorrect = (e,randNumber) => {
     answersThree.classList.add('incorrectButton')
     answersFour.classList.add('incorrectButton')
 }
-//return a score if user answer is correct 
+// a new score variable
 let score = 0;
 
 
@@ -286,6 +286,10 @@ const resetGame = () => {
     newQuestion.innerHTML = 'Capital Quiz';
     icon.innerHTML = '🌎';
     points.innerHTML = '0';
+    answers.innerHTML = '';
+    answersTwo.innerHTML = '';
+    answersThree.innerHTML = '';
+    answersFour.innerHTML = '';
 }
 reset.addEventListener('click', resetGame);
 
