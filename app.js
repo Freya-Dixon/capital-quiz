@@ -239,15 +239,20 @@ console.log(values);
 console.log(entries);
 console.log(keys.length);
 
+// change question button if answer correct
 const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
         answers.classList.add('correctButton')
+       points.innerHTML = ++score;
+        
     } else 
     //reference the two class lists created in css
     answersTwo.classList.add('incorrectButton')
     answersThree.classList.add('incorrectButton')
     answersFour.classList.add('incorrectButton')
 }
+//return a score if user answer is correct 
+let score = 0;
 
 
 // display question on page 
@@ -274,7 +279,6 @@ getQuestion();
 // event listener to display new question and answers
 nextButton.addEventListener('click', getQuestion);
 
-// alert user if value = capital or value = notCapitals by changing the colour. Element should return green if correct and red if incorrect. Bonus, add icon that displays a tick or cross after
 
 
 // clear output and return to start 
@@ -284,3 +288,4 @@ const resetGame = () => {
     points.innerHTML = '0';
 }
 reset.addEventListener('click', resetGame);
+

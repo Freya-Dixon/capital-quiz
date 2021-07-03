@@ -236,18 +236,21 @@ var values = Object.values(questions);
 var keys = Object.keys(questions);
 console.log(values);
 console.log(entries);
-console.log(keys.length);
+console.log(keys.length); // change question button if answer correct
 
 var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
   if (e.target.innerHTML === values[randNumber].capital) {
     answers.classList.add('correctButton');
+    points.innerHTML = ++score;
   } else //reference the two class lists created in css
     answersTwo.classList.add('incorrectButton');
 
   answersThree.classList.add('incorrectButton');
   answersFour.classList.add('incorrectButton');
-}; // display question on page 
+}; //return a score if user answer is correct 
 
+
+var score = 0; // display question on page 
 
 var getQuestion = function getQuestion() {
   var randomNumber = Math.round(Math.random() * 29);
@@ -276,8 +279,7 @@ var getQuestion = function getQuestion() {
 console.log(getQuestion);
 getQuestion(); // event listener to display new question and answers
 
-nextButton.addEventListener('click', getQuestion); // alert user if value = capital or value = notCapitals by changing the colour. Element should return green if correct and red if incorrect. Bonus, add icon that displays a tick or cross after
-// clear output and return to start 
+nextButton.addEventListener('click', getQuestion); // clear output and return to start 
 
 var resetGame = function resetGame() {
   newQuestion.innerHTML = 'Capital Quiz';
