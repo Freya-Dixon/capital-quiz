@@ -311,9 +311,8 @@ var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
     answersTwo.classList.add('incorrectButton');
 
   answersThree.classList.add('incorrectButton');
-  answersFour.classList.add('incorrectButton');
-  var incorrectAudio = new Audio('wronganswer.mp3');
-  incorrectAudio.play();
+  answersFour.classList.add('incorrectButton'); // let incorrectAudio = new Audio('wronganswer.mp3');
+  //    incorrectAudio.play()
 };
 
 window.setInterval(ifAnswerCorrect, 3000); // display question on page 
