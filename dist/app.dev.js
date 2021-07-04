@@ -350,7 +350,7 @@ nextButton.addEventListener('click', getQuestion); // window.setInterval(getQues
 var resetGame = function resetGame() {
   newQuestion.innerHTML = 'Capital Quiz';
   icon.innerHTML = '🌎';
-  points.innerHTML = '0';
+  points.innerHTML = '0 ⭐';
   score = 0;
   answers.innerHTML = 'Answer the correct capital by pressing the option buttons';
   answersTwo.innerHTML = '';

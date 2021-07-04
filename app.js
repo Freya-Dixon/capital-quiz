@@ -351,7 +351,7 @@ nextButton.addEventListener('click', getQuestion);
 const resetGame = () => {
     newQuestion.innerHTML = 'Capital Quiz';
     icon.innerHTML = '🌎';
-    points.innerHTML = '0';
+    points.innerHTML = '0 ⭐';
     score = 0;
     answers.innerHTML = 'Answer the correct capital by pressing the option buttons';
     answersTwo.innerHTML = '';

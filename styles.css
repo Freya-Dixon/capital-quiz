@@ -27,8 +27,6 @@
   width: 55px;
   height: 55px;
   color: #C36F25;
-  border: 5px double #C36F25;
-  border-radius: 50%;
   align-items: center;
 }
 .container .question__container {
