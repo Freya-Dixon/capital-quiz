@@ -18,10 +18,16 @@
     background-size: contain;
     box-shadow: rgba(85, 77, 77, 0.801) 5px 5px 5px;
     p {
+    margin: 0 auto;
     font-family: $prm-font;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 1000;
-    color: $ter-font-color;
+    width: 55px;
+    height: 55px;
+    color: $sec-font-color;
+    border: 5px double $sec-font-color;
+    border-radius: 50%;
+   align-items: center;
     }
     .question__container {
         align-items: center;
