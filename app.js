@@ -302,20 +302,24 @@ console.log(keys.length);
 
 // a new score variable
 let score = 0;
-// change question button if answer correct
+
 const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
         answers.removeAttribute("style")
         answers.classList.add('correctButton')
         points.innerHTML = ++score;
+        let correctAudio = new Audio('correctanswer.mp3');
+        correctAudio.play()
         
     } else 
     //reference the two class lists created in css
     answersTwo.classList.add('incorrectButton')
     answersThree.classList.add('incorrectButton')
     answersFour.classList.add('incorrectButton')
+    let incorrectAudio = new Audio('wronganswer.mp3');
+       incorrectAudio.play()
 }
-// setInterval(ifAnswerCorrect, 3000);
+window.setInterval(ifAnswerCorrect, 3000);
 
 // display question on page 
 const getQuestion = () => {
@@ -340,7 +344,7 @@ getQuestion();
 
 // event listener to display new question and answers
 nextButton.addEventListener('click', getQuestion);
-window.setInterval(getQuestion, 5000);
+// window.setInterval(getQuestion, 5000);
 
 
 // clear output and return to start 
@@ -360,3 +364,9 @@ const resetGame = () => {
 }
 reset.addEventListener('click', resetGame);
 
+//add timer 
+
+// const timer = new Date().getTime();
+// var timeleft = countDownDate - now;
+// var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+// document.getElementById("secs").innerHTML = seconds + "s"
