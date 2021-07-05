@@ -1,6 +1,8 @@
 // set variables on html page 
 const newQuestion = document.querySelector('.question')
 console.log(newQuestion);
+const allButtons = document.querySelectorAll('.btn');
+console.log(allButtons);
 const answers = document.querySelector('#btn1')
 console.log(answers);
 const answersTwo = document.querySelector('#btn2')
@@ -347,7 +349,13 @@ const ifAnswerCorrect = (e,randNumber) => {
        incorrectAudio.play()
 }
 // window.setInterval(ifAnswerCorrect, 3000);
-
+const removeStyle = () => {
+    answers.classList.remove('correctButton');
+    answersTwo.classList.remove('incorrectButton');
+    answersThree.classList.remove('incorrectButton');
+    answersFour.classList.remove('incorrectButton');
+    newQuestion.classList.remove('home__styling')
+};
 // display question on page 
 const getQuestion = () => {
     let randomNumber = Math.round(Math.random() * (48))
@@ -365,27 +373,23 @@ answers.addEventListener('click',(e)=>ifAnswerCorrect(e,randomNumber));
 answersTwo.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
 answersThree.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
 answersFour.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
+
 removeStyle()
 }
 console.log(getQuestion);
 getQuestion();
 
 // event listener to display new question and answers
-nextButton.addEventListener('click', getQuestion);
+nextButton.addEventListener('click', getQuestion, removeStyle);
 // window.setInterval(getQuestion, 5000);
 
-const removeStyle = () => {
-    answers.classList.remove('correctButton');
-    answersTwo.classList.remove('incorrectButton');
-    answersThree.classList.remove('incorrectButton');
-    answersFour.classList.remove('incorrectButton');
-};
 
+// removeStyle()
 
 // clear output and return to start 
 const resetGame = () => {
-    // newQuestion.classList.add('home__styling')
-    newQuestion.innerHTML = 'Capital Quiz';
+    newQuestion.classList.add('home__styling');
+    newQuestion.innerHTML = 'Capital Quiz'
     icon.innerHTML = '🌎';
     points.innerHTML = '';
     score = 0;

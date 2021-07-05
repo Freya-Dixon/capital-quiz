@@ -1,6 +1,8 @@
 @import "_variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Codystar&family=Train+One&display=swap');
 * {
     margin: 0 auto;
@@ -38,7 +40,7 @@
         font-size: 20px;
       
         h1 {
-            color: #C64A1F;
+            color: #DD644E;
             background-color:   $background-color;
             border-radius: 30px;
             margin: 0 auto;
@@ -69,9 +71,9 @@
         margin-top: 20px;
         font-family: $prm-font;
         font-weight: bold;
-        color: $sec-font-color;
+        color: #3A8183;
+        border: none;
         justify-content: space-between;
-        border: 2px solid $sec-font-color;
         font-size: 30px;
         font-weight: bolder;
         border-radius: 20px;
@@ -133,14 +135,15 @@
         border-radius: 50%;
         background-color: $background-color;
     }
-    .home--btn {
+    .homeBtns {
+        background-color: transparent;
         border: none;
         font-size: 20px;
     }
-    // .home__styling {
-    //     border: none;
-    //     font-size: 70px;
-    //     background-color: transparent;
-    //     font-family: 'Codystar', cursive;
-    // }
+    .home__styling {
+        border: none;
+        font-size: 70px;
+        background-color: transparent;
+        font-family: 'Codystar', cursive;
+    }
 }

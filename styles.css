@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Codystar&family=Train+One&display=swap");
 * {
@@ -12,7 +13,7 @@
   width: 400px;
   height: 710px;
   border-radius: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -40,7 +41,7 @@
   font-size: 20px;
 }
 .container .question__container h1 {
-  color: #C64A1F;
+  color: #DD644E;
   background-color: transparent;
   border-radius: 30px;
   margin: 0 auto;
@@ -66,11 +67,11 @@
 }
 .container .btn {
   margin-top: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: bold;
-  color: #C36F25;
+  color: #3A8183;
+  border: none;
   justify-content: space-between;
-  border: 2px solid #C36F25;
   font-size: 30px;
   font-weight: bolder;
   border-radius: 20px;
@@ -101,7 +102,7 @@
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   width: 50px;
   height: 50px;
   border: none;
@@ -113,7 +114,7 @@
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   width: 50px;
   height: 50px;
   border: none;
@@ -125,14 +126,21 @@
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   width: 50px;
   height: 50px;
   border: none;
   border-radius: 50%;
   background-color: transparent;
 }
-.container .home--btn {
+.container .homeBtns {
+  background-color: transparent;
   border: none;
   font-size: 20px;
+}
+.container .home__styling {
+  border: none;
+  font-size: 70px;
+  background-color: transparent;
+  font-family: "Codystar", cursive;
 }

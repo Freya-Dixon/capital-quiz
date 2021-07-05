@@ -3,6 +3,8 @@
 // set variables on html page 
 var newQuestion = document.querySelector('.question');
 console.log(newQuestion);
+var allButtons = document.querySelectorAll('.btn');
+console.log(allButtons);
 var answers = document.querySelector('#btn1');
 console.log(answers);
 var answersTwo = document.querySelector('#btn2');
@@ -342,7 +344,15 @@ var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
   var incorrectAudio = new Audio('wronganswer.mp3');
   incorrectAudio.play();
 }; // window.setInterval(ifAnswerCorrect, 3000);
-// display question on page 
+
+
+var removeStyle = function removeStyle() {
+  answers.classList.remove('correctButton');
+  answersTwo.classList.remove('incorrectButton');
+  answersThree.classList.remove('incorrectButton');
+  answersFour.classList.remove('incorrectButton');
+  newQuestion.classList.remove('home__styling');
+}; // display question on page 
 
 
 var getQuestion = function getQuestion() {
@@ -373,18 +383,12 @@ var getQuestion = function getQuestion() {
 console.log(getQuestion);
 getQuestion(); // event listener to display new question and answers
 
-nextButton.addEventListener('click', getQuestion); // window.setInterval(getQuestion, 5000);
-
-var removeStyle = function removeStyle() {
-  answers.classList.remove('correctButton');
-  answersTwo.classList.remove('incorrectButton');
-  answersThree.classList.remove('incorrectButton');
-  answersFour.classList.remove('incorrectButton');
-}; // clear output and return to start 
-
+nextButton.addEventListener('click', getQuestion, removeStyle); // window.setInterval(getQuestion, 5000);
+// removeStyle()
+// clear output and return to start 
 
 var resetGame = function resetGame() {
-  // newQuestion.classList.add('home__styling')
+  newQuestion.classList.add('home__styling');
   newQuestion.innerHTML = 'Capital Quiz';
   icon.innerHTML = '🌎';
   points.innerHTML = '';
