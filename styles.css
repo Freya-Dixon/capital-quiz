@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Codystar&family=Train+One&display=swap");
 * {
   margin: 0 auto;
   box-sizing: border-box;
@@ -24,7 +25,7 @@
   margin: 0 auto;
   font-family: "Train One", cursive;
   font-size: 30px;
-  font-weight: 1000;
+  font-weight: bolder;
   width: 55px;
   height: 55px;
   color: #F2A73B;
@@ -63,7 +64,7 @@
   padding: 0px;
   opacity: 1;
 }
-.container button {
+.container .btn {
   margin-top: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -78,7 +79,7 @@
   background-color: transparent;
   opacity: 1;
 }
-.container button:hover {
+.container .btn:hover {
   opacity: 0.6;
   transition: 0.3s;
   cursor: pointer;
@@ -134,9 +135,4 @@
 .container .home--btn {
   border: none;
   font-size: 20px;
-}
-.container .home__styling {
-  border: none;
-  font-size: 20px;
-  background-color: transparent;
 }

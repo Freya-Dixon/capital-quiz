@@ -1,13 +1,13 @@
 // set variables on html page 
 const newQuestion = document.querySelector('.question')
 console.log(newQuestion);
-const answers = document.querySelector('.btn')
+const answers = document.querySelector('#btn1')
 console.log(answers);
-const answersTwo = document.querySelector('.btn__two')
+const answersTwo = document.querySelector('#btn2')
 console.log(answersTwo);
-const answersThree = document.querySelector('.btn__three')
+const answersThree = document.querySelector('#btn3')
 console.log(answersThree);
-const answersFour = document.querySelector('.btn__four')
+const answersFour = document.querySelector('#btn4')
 console.log(answersThree);
 const wrongAnswer = document.getElementsByClassName('incorrectButton')
 console.log(wrongAnswer);
@@ -333,7 +333,6 @@ let score = 0;
 
 const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
-        answers.removeAttribute("style")
         answers.classList.add('correctButton')
         points.innerHTML = ++score;
         let correctAudio = new Audio('correctanswer.mp3');
@@ -366,6 +365,7 @@ answers.addEventListener('click',(e)=>ifAnswerCorrect(e,randomNumber));
 answersTwo.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
 answersThree.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
 answersFour.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
+removeStyle()
 }
 console.log(getQuestion);
 getQuestion();
@@ -374,21 +374,25 @@ getQuestion();
 nextButton.addEventListener('click', getQuestion);
 // window.setInterval(getQuestion, 5000);
 
+const removeStyle = () => {
+    answers.classList.remove('correctButton');
+    answersTwo.classList.remove('incorrectButton');
+    answersThree.classList.remove('incorrectButton');
+    answersFour.classList.remove('incorrectButton');
+};
+
 
 // clear output and return to start 
 const resetGame = () => {
+    // newQuestion.classList.add('home__styling')
     newQuestion.innerHTML = 'Capital Quiz';
-    icon.innerHTML = '';
+    icon.innerHTML = '🌎';
     points.innerHTML = '';
     score = 0;
-    answers.innerHTML = 'Answer the correct capital by pressing the option buttons';
-    answersTwo.innerHTML = 'Reset the game by pressing the start button at bottom of page';
+    answers.innerHTML = '';
+    answersTwo.innerHTML = '';
     answersThree.innerHTML = '';
-    answersFour.innerHTML = 'Good luck!';
-    answers.classList.add('home--btn')
-    answersTwo.classList.add('home--btn')
-    answersThree.classList.add('home--btn')
-    answersFour.classList.add('home--btn')
+    answersFour.innerHTML = '';
 }
 reset.addEventListener('click', resetGame);
 
