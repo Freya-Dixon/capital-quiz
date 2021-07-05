@@ -23,7 +23,11 @@ var points = document.querySelector('.point__total');
 console.log(points); // object data 
 
 var reset = document.querySelector('.reset__game--btn');
-console.log(reset);
+console.log(reset); // const imageCorrect = document.querySelector('.btn--image--correct').src;
+// console.log(image);
+// const imageIncorrect = document.querySelector('.btn--image--incorrect').src;
+// console.log(image);
+
 var questions = {
   "england": {
     question: "The capital city of England is..",
@@ -41,7 +45,7 @@ var questions = {
     question: "The capital city of France is..",
     flag: "󠁧󠁢󠁥󠁮󠁧🇫🇷",
     capital: "Paris",
-    notCapitals: ["Lille", "Lyon", "Berlin"]
+    notCapitals: ["Lille", "Lyon", "Marseille"]
   },
   "italy": {
     question: "The capital city of Italy is..",
@@ -288,6 +292,30 @@ var questions = {
     flag: "󠁧󠁢󠁥󠁮󠁧🇰🇼",
     capital: "Kuwait City",
     notCapitals: ["Doha", "Failaka", "Jahra"]
+  },
+  "bangladesh": {
+    question: "The capital city of Bangladesh is..",
+    flag: "󠁧󠁢󠁥󠁮󠁧🇧🇩",
+    capital: "Dhaka",
+    notCapitals: ["Chittagong", "Rajshahi", "Bogra"]
+  },
+  "scotland": {
+    question: "The capital city of Scotland is..",
+    flag: "󠁧󠁢󠁥󠁮󠁧🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    capital: "Edinburgh",
+    notCapitals: ["Glasgow", "Aberdeen", "Inverness"]
+  },
+  "faroe islands": {
+    question: "The capital city of the Faroe Islands is..",
+    flag: "󠁧󠁢󠁥󠁮󠁧🇫🇴",
+    capital: "Tórshavn",
+    notCapitals: ["Klaksvík", "Eiði", "Sørvágur"]
+  },
+  "afghanistan": {
+    question: "The capital city of Afghanistan is..",
+    flag: "󠁧󠁢󠁥󠁮󠁧󠁧󠁢󠁳🇦🇫",
+    capital: "Kabul",
+    notCapitals: ["Kandahar", "Taloqan", "Ghazni"]
   }
 };
 console.log(questions);
@@ -311,14 +339,15 @@ var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
     answersTwo.classList.add('incorrectButton');
 
   answersThree.classList.add('incorrectButton');
-  answersFour.classList.add('incorrectButton'); // let incorrectAudio = new Audio('wronganswer.mp3');
-  //    incorrectAudio.play()
-};
+  answersFour.classList.add('incorrectButton');
+  var incorrectAudio = new Audio('wronganswer.mp3');
+  incorrectAudio.play();
+}; // window.setInterval(ifAnswerCorrect, 3000);
+// display question on page 
 
-window.setInterval(ifAnswerCorrect, 3000); // display question on page 
 
 var getQuestion = function getQuestion() {
-  var randomNumber = Math.round(Math.random() * 44);
+  var randomNumber = Math.round(Math.random() * 48);
   console.log(randomNumber);
   console.log(keys[randomNumber]);
   newQuestion.innerHTML = values[randomNumber].question;
@@ -349,12 +378,12 @@ nextButton.addEventListener('click', getQuestion); // window.setInterval(getQues
 
 var resetGame = function resetGame() {
   newQuestion.innerHTML = 'Capital Quiz';
-  icon.innerHTML = '🌎';
-  points.innerHTML = '0 ⭐';
+  icon.innerHTML = '';
+  points.innerHTML = '';
   score = 0;
   answers.innerHTML = 'Answer the correct capital by pressing the option buttons';
-  answersTwo.innerHTML = '';
-  answersThree.innerHTML = 'Reset the game by pressing the start button at bottom of page';
+  answersTwo.innerHTML = 'Reset the game by pressing the start button at bottom of page';
+  answersThree.innerHTML = '';
   answersFour.innerHTML = 'Good luck!';
   answers.classList.add('home--btn');
   answersTwo.classList.add('home--btn');
