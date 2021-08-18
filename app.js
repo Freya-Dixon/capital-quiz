@@ -1,7 +1,7 @@
 // set variables on html page 
 const newQuestion = document.querySelector('.question')
 console.log(newQuestion);
-const allButtons = document.querySelectorAll('.btn');
+const allButtons = document.querySelector('.btn');
 console.log(allButtons);
 const answers = document.querySelector('#btn1')
 console.log(answers);
@@ -133,11 +133,11 @@ const questions = {
         capital: "Ottawa",
         notCapitals: ["Toronto", "Vancouver", "Montreal"]
     },
-    "trinidad and tobago": {
-        question: "The capital city of Trinidad and Tobago is..",
+    "cuba": {
+        question: "The capital city of Cuba is..",
         flag: "󠁧󠁢󠁥󠁮󠁧🇹🇹",
-        capital: "Port of Spain",
-        notCapitals: ["Arima", "Scarborough", "Point Fortin"]
+        capital: "Havana",
+        notCapitals: ["Santiago de Cuba", "Holguín", "Bayamo"]
     },
     "iceland": {
         question: "The capital city of Iceland is..",
@@ -354,7 +354,7 @@ const removeStyle = () => {
     answersTwo.classList.remove('incorrectButton');
     answersThree.classList.remove('incorrectButton');
     answersFour.classList.remove('incorrectButton');
-    newQuestion.classList.remove('home__styling')
+   
 };
 // display question on page 
 const getQuestion = () => {
@@ -373,7 +373,7 @@ answers.addEventListener('click',(e)=>ifAnswerCorrect(e,randomNumber));
 answersTwo.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
 answersThree.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
 answersFour.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
-
+newQuestion.classList.remove('home__styling');
 removeStyle()
 }
 console.log(getQuestion);
@@ -388,9 +388,7 @@ nextButton.addEventListener('click', getQuestion, removeStyle);
 
 // clear output and return to start 
 const resetGame = () => {
-    newQuestion.classList.add('home__styling');
     newQuestion.innerHTML = 'Capital Quiz'
-    icon.innerHTML = '🌎';
     points.innerHTML = '';
     score = 0;
     answers.innerHTML = '';

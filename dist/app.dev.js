@@ -3,7 +3,7 @@
 // set variables on html page 
 var newQuestion = document.querySelector('.question');
 console.log(newQuestion);
-var allButtons = document.querySelectorAll('.btn');
+var allButtons = document.querySelector('.btn');
 console.log(allButtons);
 var answers = document.querySelector('#btn1');
 console.log(answers);
@@ -133,11 +133,11 @@ var questions = {
     capital: "Ottawa",
     notCapitals: ["Toronto", "Vancouver", "Montreal"]
   },
-  "trinidad and tobago": {
-    question: "The capital city of Trinidad and Tobago is..",
+  "cuba": {
+    question: "The capital city of Cuba is..",
     flag: "󠁧󠁢󠁥󠁮󠁧🇹🇹",
-    capital: "Port of Spain",
-    notCapitals: ["Arima", "Scarborough", "Point Fortin"]
+    capital: "Havana",
+    notCapitals: ["Santiago de Cuba", "Holguín", "Bayamo"]
   },
   "iceland": {
     question: "The capital city of Iceland is..",
@@ -351,7 +351,6 @@ var removeStyle = function removeStyle() {
   answersTwo.classList.remove('incorrectButton');
   answersThree.classList.remove('incorrectButton');
   answersFour.classList.remove('incorrectButton');
-  newQuestion.classList.remove('home__styling');
 }; // display question on page 
 
 
@@ -377,6 +376,7 @@ var getQuestion = function getQuestion() {
   answersFour.addEventListener('click', function (e) {
     return ifAnswerCorrect(e, randomNumber);
   });
+  newQuestion.classList.remove('home__styling');
   removeStyle();
 };
 
@@ -388,9 +388,7 @@ nextButton.addEventListener('click', getQuestion, removeStyle); // window.setInt
 // clear output and return to start 
 
 var resetGame = function resetGame() {
-  newQuestion.classList.add('home__styling');
   newQuestion.innerHTML = 'Capital Quiz';
-  icon.innerHTML = '🌎';
   points.innerHTML = '';
   score = 0;
   answers.innerHTML = '';
