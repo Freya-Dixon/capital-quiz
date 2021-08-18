@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&family=Train+One&display=swap');
+@import "_variables.scss";
+
+.container {
+    margin: 0 auto;
+    width: 80vw;
+    height: 100vh;
+    border-radius: 30px;
+    font-family: $prm-font;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("mapbackground.png");
+    background-size: cover;
+
+    font-family: 'Codystar', cursive;
+    .heading {
+        font-size: 4em;
+    }
+    p {
+    margin: 0 auto;
+    width: 30vw;
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-family: $prm-font;
+    color: #F2A73B;
+    align-items: center;
+    }
+    .start_btn {
+        width: 15vw;
+        height: 8vh;
+        font-family: $prm-font;
+        background-color: #F2A73B;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+        border: none;
+        margin-top: 5vh;
+        border-radius: 10px;
+        &:hover {
+            opacity: 0.6;
+            transition: 0.3s;
+            cursor: pointer;
+            background-color: white;
+            color: #F2A73B;
+        }
+    }
+
+}
