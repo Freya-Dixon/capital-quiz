@@ -12,7 +12,7 @@ console.log(answersTwo);
 var answersThree = document.querySelector('#btn3');
 console.log(answersThree);
 var answersFour = document.querySelector('#btn4');
-console.log(answersThree);
+console.log(answersFour);
 var wrongAnswer = document.getElementsByClassName('incorrectButton');
 console.log(wrongAnswer);
 var correctAnswer = document.getElementsByClassName('correctButton');
@@ -336,13 +336,15 @@ var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
     points.innerHTML = ++score;
     var correctAudio = new Audio('correctanswer.mp3');
     correctAudio.play();
-  } else //reference the two class lists created in css
+  } else {
+    //reference the two class lists created in css
+    answers.classList.add('correctButton');
     answersTwo.classList.add('incorrectButton');
-
-  answersThree.classList.add('incorrectButton');
-  answersFour.classList.add('incorrectButton');
-  var incorrectAudio = new Audio('wronganswer.mp3');
-  incorrectAudio.play();
+    answersThree.classList.add('incorrectButton');
+    answersFour.classList.add('incorrectButton');
+    var incorrectAudio = new Audio('wronganswer.mp3');
+    incorrectAudio.play();
+  }
 }; // window.setInterval(ifAnswerCorrect, 3000);
 
 

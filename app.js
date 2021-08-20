@@ -10,7 +10,7 @@ console.log(answersTwo);
 const answersThree = document.querySelector('#btn3')
 console.log(answersThree);
 const answersFour = document.querySelector('#btn4')
-console.log(answersThree);
+console.log(answersFour);
 const wrongAnswer = document.getElementsByClassName('incorrectButton')
 console.log(wrongAnswer);
 const correctAnswer = document.getElementsByClassName('correctButton')
@@ -340,13 +340,15 @@ const ifAnswerCorrect = (e,randNumber) => {
         let correctAudio = new Audio('correctanswer.mp3');
         correctAudio.play()
         
-    } else 
+    } else {
     //reference the two class lists created in css
+    answers.classList.add('correctButton')
     answersTwo.classList.add('incorrectButton')
     answersThree.classList.add('incorrectButton')
     answersFour.classList.add('incorrectButton')
     let incorrectAudio = new Audio('wronganswer.mp3');
        incorrectAudio.play()
+    }
 }
 // window.setInterval(ifAnswerCorrect, 3000);
 const removeStyle = () => {

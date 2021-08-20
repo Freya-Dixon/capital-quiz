@@ -103,18 +103,22 @@
         background-color: #B02E29;
         border: 2px solid #B02E29;
     }
+    a {
+        text-decoration: none;
+        color: white;
+    }
     .reset__game--btn {
         color: #2B7188;
-
         font-size: 30px;
         font-family: $prm-font;
-        width: 20vw;
+        width: 25vw;
         height: 5vh;
         border: none;
         border-radius: 50%;
-        background-color: $background-color;
+        background-color: transparent;
         a {
             text-decoration: none;
+            color: white;
         }
     }
     .next__question--btn {

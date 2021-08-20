@@ -100,11 +100,15 @@
   background-color: #B02E29;
   border: 2px solid #B02E29;
 }
+.container a {
+  text-decoration: none;
+  color: white;
+}
 .container .reset__game--btn {
   color: #2B7188;
   font-size: 30px;
   font-family: "Oswald", sans-serif;
-  width: 20vw;
+  width: 25vw;
   height: 5vh;
   border: none;
   border-radius: 50%;
@@ -112,6 +116,7 @@
 }
 .container .reset__game--btn a {
   text-decoration: none;
+  color: white;
 }
 .container .next__question--btn {
   color: #A16260;
