@@ -334,8 +334,10 @@ var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
   if (e.target.innerHTML === values[randNumber].capital) {
     answers.classList.add('correctButton');
     points.innerHTML = ++score;
-    var correctAudio = new Audio('correctanswer.mp3');
-    correctAudio.play();
+
+    var _correctAudio = new Audio('correctanswer.mp3');
+
+    _correctAudio.play();
   } else {
     //reference the two class lists created in css
     answers.classList.add('correctButton');
@@ -344,6 +346,7 @@ var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
     answersFour.classList.add('incorrectButton');
     var incorrectAudio = new Audio('wronganswer.mp3');
     incorrectAudio.play();
+    correctAudio.muted();
   }
 }; // window.setInterval(ifAnswerCorrect, 3000);
 
@@ -357,7 +360,7 @@ var removeStyle = function removeStyle() {
 
 
 var getQuestion = function getQuestion() {
-  var randomNumber = Math.round(Math.random() * 48);
+  var randomNumber = Math.round(Math.random() * 46);
   console.log(randomNumber);
   console.log(keys[randomNumber]);
   newQuestion.innerHTML = values[randomNumber].question;
@@ -386,17 +389,12 @@ console.log(getQuestion);
 getQuestion(); // event listener to display new question and answers
 
 nextButton.addEventListener('click', getQuestion, removeStyle); // window.setInterval(getQuestion, 5000);
-// removeStyle()
 // clear output and return to start 
 
 var resetGame = function resetGame() {
   newQuestion.innerHTML = 'Capital Quiz';
   points.innerHTML = '';
   score = 0;
-  answers.innerHTML = '';
-  answersTwo.innerHTML = '';
-  answersThree.innerHTML = '';
-  answersFour.innerHTML = '';
 };
 
 reset.addEventListener('click', resetGame); //add timer 

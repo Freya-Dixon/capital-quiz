@@ -72,7 +72,7 @@
 
         font-family: $prm-font;
         font-weight: bold;
-        color: #E0702F;
+        color: #D87101;
         border: none;
         justify-content: space-between;
         font-size: 30px;
@@ -85,6 +85,7 @@
         opacity: 1;
         margin-bottom: 2vh;
         margin-left: 2vw;
+        border: 2px solid #D87101;
         &:hover {
             opacity: 0.6;
             transition: 0.3s;

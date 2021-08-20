@@ -318,7 +318,7 @@ const questions = {
         flag: "󠁧󠁢󠁥󠁮󠁧󠁧󠁢󠁳🇦🇫",
         capital: "Kabul",
         notCapitals: ["Kandahar", "Taloqan", "Ghazni"]
-    },
+    }
 };
 console.log(questions);
 const entries = Object.entries(questions);
@@ -329,7 +329,6 @@ console.log(entries);
 console.log(keys.length);
 
 
-
 // a new score variable
 let score = 0;
 
@@ -337,17 +336,18 @@ const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
         answers.classList.add('correctButton')
         points.innerHTML = ++score;
-        let correctAudio = new Audio('correctanswer.mp3');
+        let correctAudio = new Audio('correctanswer.mp3')
         correctAudio.play()
         
-    } else {
+    }  else {
     //reference the two class lists created in css
     answers.classList.add('correctButton')
     answersTwo.classList.add('incorrectButton')
     answersThree.classList.add('incorrectButton')
     answersFour.classList.add('incorrectButton')
-    let incorrectAudio = new Audio('wronganswer.mp3');
+    let incorrectAudio = new Audio('wronganswer.mp3')
        incorrectAudio.play()
+       correctAudio.muted()
     }
 }
 // window.setInterval(ifAnswerCorrect, 3000);
@@ -360,10 +360,9 @@ const removeStyle = () => {
 };
 // display question on page 
 const getQuestion = () => {
-    let randomNumber = Math.round(Math.random() * (48))
+    let randomNumber = Math.round(Math.random() * (46))
     console.log(randomNumber);
     console.log(keys[randomNumber]);
-
     newQuestion.innerHTML = values[randomNumber].question;
     icon.innerHTML = values[randomNumber].flag;
     answers.innerHTML = values[randomNumber].capital;
@@ -385,18 +384,11 @@ getQuestion();
 nextButton.addEventListener('click', getQuestion, removeStyle);
 // window.setInterval(getQuestion, 5000);
 
-
-// removeStyle()
-
 // clear output and return to start 
 const resetGame = () => {
     newQuestion.innerHTML = 'Capital Quiz'
     points.innerHTML = '';
     score = 0;
-    answers.innerHTML = '';
-    answersTwo.innerHTML = '';
-    answersThree.innerHTML = '';
-    answersFour.innerHTML = '';
 }
 reset.addEventListener('click', resetGame);
 
