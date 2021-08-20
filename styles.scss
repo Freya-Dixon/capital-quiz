@@ -10,8 +10,8 @@
 }
 .container {
     margin: 0 auto;
-    width: 400px;
-    height: 710px;
+    width: 80vw;
+    height: 80vh;
     border-radius: 30px;
     font-family: $prm-font;
     text-align: center;
@@ -19,56 +19,57 @@
     flex-direction: column;
     justify-content: center;
     background-image: url("mapbackground.png");
-    background-size: contain;
-    box-shadow: rgba(85, 77, 77, 0.801) 5px 5px 5px;
+    background-size: cover;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 3px solid salmon;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
     p {
     margin: 0 auto;
     font-family: 'Train One', cursive;
     font-size: 30px;
     font-weight: bolder;
-    width: 55px;
-    height: 55px;
+    width: 10vw;
+    height: 10vh;
     color: #F2A73B;
     align-items: center;
     }
     .question__container {
         align-items: center;
-        width: 325px;
-        height: 200px;
+        width: 70vw;
+        height: 50vh;
         border-radius: 20px;
         background-color: transparent;
-        font-size: 20px;
+        font-size: 1em;
       
         h1 {
             color: #DD644E;
             background-color:   $background-color;
-            border-radius: 30px;
             margin: 0 auto;
             text-align: center;
         }
-        h2 {
+        .icon {
             margin: 0 auto;
-            margin-bottom: 20px;
             text-align: center;
-            font-size: 80px;
+            font-size: 6em;
         }
     }
   
     .question__btns {
+        margin: 0 auto;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 20px;
         border: none;
         border-radius: 30px;
         background-color:  $background-color;
-        width: 325px;
-        height: 300px;
+        width: 50vw;
+        height: 30vh;
         padding: 0px;
         opacity: 1;
         
     }
     .btn {
-        margin-top: 20px;
+
         font-family: $prm-font;
         font-weight: bold;
         color: #E0702F;
@@ -77,10 +78,13 @@
         font-size: 30px;
         font-weight: bolder;
         border-radius: 20px;
-        width: 300px;
-        height: 55px;
+        width: 20vw;
+        height: 10vh;
+        margin: 0 auto;
         background-color:  $background-color;
         opacity: 1;
+        margin-bottom: 2vh;
+        margin-left: 2vw;
         &:hover {
             opacity: 0.6;
             transition: 0.3s;
@@ -101,15 +105,17 @@
     }
     .reset__game--btn {
         color: #2B7188;
-        margin-top: 5px;
-        margin-bottom: 5px;
+
         font-size: 30px;
         font-family: $prm-font;
-        width: 50px;
-        height: 50px;
+        width: 20vw;
+        height: 5vh;
         border: none;
         border-radius: 50%;
         background-color: $background-color;
+        a {
+            text-decoration: none;
+        }
     }
     .next__question--btn {
         color:  #A16260;

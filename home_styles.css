@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Codystar&family=Train+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+* {
+  background-color: #F8EBDD;
+}
+
 .container {
   margin: 0 auto;
   width: 80vw;
-  height: 100vh;
+  height: 80vh;
   border-radius: 30px;
   font-family: "Oswald", sans-serif;
   text-align: center;
@@ -13,10 +18,26 @@
   justify-content: center;
   background-image: url("mapbackground.png");
   background-size: cover;
-  font-family: "Codystar", cursive;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 3px solid salmon;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 .container .heading {
+  margin: 0 auto;
   font-size: 4em;
+  color: #C14A32;
+  background-color: transparent;
+  margin-bottom: 5vh;
+  font-family: "Poppins", sans-serif;
+  width: 60vw;
+}
+.container .text-wrapper {
+  margin: 0 auto;
+  padding: 5vh;
+  width: 70vw;
+  border-radius: 20px;
+  background-color: transparent;
 }
 .container p {
   margin: 0 auto;
@@ -26,6 +47,7 @@
   font-family: "Oswald", sans-serif;
   color: #F2A73B;
   align-items: center;
+  background-color: transparent;
 }
 .container .start_btn {
   width: 15vw;
