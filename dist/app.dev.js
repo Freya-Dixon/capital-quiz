@@ -22,14 +22,9 @@ console.log(nextButton);
 var icon = document.querySelector('.icon');
 console.log(icon);
 var points = document.querySelector('.point__total');
-console.log(points); // object data 
-
+console.log(points);
 var reset = document.querySelector('.reset__game--btn');
-console.log(reset); // const imageCorrect = document.querySelector('.btn--image--correct').src;
-// console.log(image);
-// const imageIncorrect = document.querySelector('.btn--image--incorrect').src;
-// console.log(image);
-
+console.log(reset);
 var questions = {
   "england": {
     question: "The capital city of England is..",
@@ -320,7 +315,6 @@ var questions = {
     notCapitals: ["Kandahar", "Taloqan", "Ghazni"]
   }
 };
-console.log(questions);
 var entries = Object.entries(questions);
 var values = Object.values(questions);
 var keys = Object.keys(questions);
@@ -333,11 +327,12 @@ var score = 0;
 var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
   if (e.target.innerHTML === values[randNumber].capital) {
     answers.classList.add('correctButton');
+    answersTwo.classList.add('incorrectButton');
+    answersThree.classList.add('incorrectButton');
+    answersFour.classList.add('incorrectButton');
     points.innerHTML = ++score;
-
-    var _correctAudio = new Audio('correctanswer.mp3');
-
-    _correctAudio.play();
+    var correctAudio = new Audio('correctanswer.mp3');
+    correctAudio.play();
   } else {
     //reference the two class lists created in css
     answers.classList.add('correctButton');
@@ -346,7 +341,6 @@ var ifAnswerCorrect = function ifAnswerCorrect(e, randNumber) {
     answersFour.classList.add('incorrectButton');
     var incorrectAudio = new Audio('wronganswer.mp3');
     incorrectAudio.play();
-    correctAudio.muted();
   }
 }; // window.setInterval(ifAnswerCorrect, 3000);
 
@@ -360,7 +354,8 @@ var removeStyle = function removeStyle() {
 
 
 var getQuestion = function getQuestion() {
-  var randomNumber = Math.round(Math.random() * 46);
+  var randomNumber = Math.round(Math.random() * 48);
+  var randomAnswer = Math.round(Math.random() * 2);
   console.log(randomNumber);
   console.log(keys[randomNumber]);
   newQuestion.innerHTML = values[randomNumber].question;
@@ -385,7 +380,6 @@ var getQuestion = function getQuestion() {
   removeStyle();
 };
 
-console.log(getQuestion);
 getQuestion(); // event listener to display new question and answers
 
 nextButton.addEventListener('click', getQuestion, removeStyle); // window.setInterval(getQuestion, 5000);
@@ -393,12 +387,8 @@ nextButton.addEventListener('click', getQuestion, removeStyle); // window.setInt
 
 var resetGame = function resetGame() {
   newQuestion.innerHTML = 'Capital Quiz';
-  points.innerHTML = '';
+  points.innerHTML = '0';
   score = 0;
 };
 
-reset.addEventListener('click', resetGame); //add timer 
-// const timer = new Date().getTime();
-// var timeleft = countDownDate - now;
-// var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-// document.getElementById("secs").innerHTML = seconds + "s"
+reset.addEventListener('click', resetGame);

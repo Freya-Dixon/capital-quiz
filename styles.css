@@ -20,20 +20,21 @@
   justify-content: center;
   background-image: url("mapbackground.png");
   background-size: cover;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: 3px solid salmon;
+  box-shadow: rgba(240, 135, 50, 0.87) 0px 0px 0px 3px;
   margin-top: 10vh;
   margin-bottom: 5vh;
 }
 .container p {
   margin: 0 auto;
-  font-family: "Train One", cursive;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: bolder;
   width: 10vw;
   height: 10vh;
-  color: #F2A73B;
+  margin-top: 2vh;
+  color: green;
   align-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(126, 206, 110, 0.3) 0px 0px 0px 3px;
 }
 .container .question__container {
   align-items: center;
@@ -48,6 +49,7 @@
   background-color: transparent;
   margin: 0 auto;
   text-align: center;
+  padding: 1vh;
 }
 .container .question__container .icon {
   margin: 0 auto;
@@ -69,7 +71,7 @@
 .container .btn {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-  color: #D87101;
+  color: #DD644E;
   border: none;
   justify-content: space-between;
   font-size: 30px;
@@ -83,6 +85,7 @@
   margin-bottom: 2vh;
   margin-left: 2vw;
   border: 2px solid #D87101;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 .container .btn:hover {
   opacity: 0.6;

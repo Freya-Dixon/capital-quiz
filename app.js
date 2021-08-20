@@ -21,13 +21,9 @@ const icon = document.querySelector('.icon')
 console.log(icon);
 const points = document.querySelector('.point__total')
 console.log(points);
-// object data 
+
 const reset = document.querySelector('.reset__game--btn')
 console.log(reset);
-// const imageCorrect = document.querySelector('.btn--image--correct').src;
-// console.log(image);
-// const imageIncorrect = document.querySelector('.btn--image--incorrect').src;
-// console.log(image);
 
 const questions = {
     
@@ -320,7 +316,7 @@ const questions = {
         notCapitals: ["Kandahar", "Taloqan", "Ghazni"]
     }
 };
-console.log(questions);
+
 const entries = Object.entries(questions);
 const values = Object.values(questions);
 const keys = Object.keys(questions);
@@ -335,6 +331,9 @@ let score = 0;
 const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
         answers.classList.add('correctButton')
+        answersTwo.classList.add('incorrectButton')
+    answersThree.classList.add('incorrectButton')
+    answersFour.classList.add('incorrectButton')
         points.innerHTML = ++score;
         let correctAudio = new Audio('correctanswer.mp3')
         correctAudio.play()
@@ -347,7 +346,7 @@ const ifAnswerCorrect = (e,randNumber) => {
     answersFour.classList.add('incorrectButton')
     let incorrectAudio = new Audio('wronganswer.mp3')
        incorrectAudio.play()
-       correctAudio.muted()
+       
     }
 }
 // window.setInterval(ifAnswerCorrect, 3000);
@@ -360,7 +359,9 @@ const removeStyle = () => {
 };
 // display question on page 
 const getQuestion = () => {
-    let randomNumber = Math.round(Math.random() * (46))
+    let randomNumber = Math.round(Math.random() * (48))
+    let randomAnswer = Math.round(Math.random() * (2))
+
     console.log(randomNumber);
     console.log(keys[randomNumber]);
     newQuestion.innerHTML = values[randomNumber].question;
@@ -377,8 +378,8 @@ answersFour.addEventListener('click',(e)=> ifAnswerCorrect(e,randomNumber));
 newQuestion.classList.remove('home__styling');
 removeStyle()
 }
-console.log(getQuestion);
 getQuestion();
+
 
 // event listener to display new question and answers
 nextButton.addEventListener('click', getQuestion, removeStyle);
@@ -387,14 +388,8 @@ nextButton.addEventListener('click', getQuestion, removeStyle);
 // clear output and return to start 
 const resetGame = () => {
     newQuestion.innerHTML = 'Capital Quiz'
-    points.innerHTML = '';
+    points.innerHTML = '0';
     score = 0;
 }
 reset.addEventListener('click', resetGame);
 
-//add timer 
-
-// const timer = new Date().getTime();
-// var timeleft = countDownDate - now;
-// var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-// document.getElementById("secs").innerHTML = seconds + "s"
