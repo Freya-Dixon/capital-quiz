@@ -91,11 +91,7 @@
         border: 2px solid #D87101;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
         &:hover {
-            opacity: 0.6;
-            transition: 0.3s;
-            cursor: pointer;
-            background-color: $sec-font-color;
-            color: white;
+            transform: scale(1.1, 1.1);
         }
     }
     .correctButton {

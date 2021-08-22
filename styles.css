@@ -88,11 +88,7 @@
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 .container .btn:hover {
-  opacity: 0.6;
-  transition: 0.3s;
-  cursor: pointer;
-  background-color: #C36F25;
-  color: white;
+  transform: scale(1.1, 1.1);
 }
 .container .correctButton {
   color: white;
