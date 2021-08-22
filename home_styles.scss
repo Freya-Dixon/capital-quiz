@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Codystar&family=Train+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import "_variables.scss";
 * {
     background-color:#F8EBDD ;
@@ -24,11 +25,12 @@
     .heading {
         margin: 0 auto;
         font-size: 4em;
-        color: #C14A32;
+        color: #7D272C;
         background-color: transparent;
         margin-bottom: 5vh;
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Oswald', sans-serif;
         width: 60vw;
+       
    
     }
     .text-wrapper {
@@ -37,6 +39,7 @@
         width: 70vw;
         border-radius: 20px;
         background-color: transparent;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         
     }
     p {
@@ -61,11 +64,7 @@
         margin-top: 5vh;
         border-radius: 10px;
         &:hover {
-            opacity: 0.6;
-            transition: 0.3s;
-            cursor: pointer;
-            background-color: white;
-            color: #F2A73B;
+            transform: scale(1.5, 1.5);
         }
     }
 

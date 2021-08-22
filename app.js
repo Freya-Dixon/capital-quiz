@@ -181,7 +181,7 @@ const questions = {
         question: "The capital city of Qatar is..",
         flag: "󠁧󠁢󠁥󠁮󠁧🇶🇦",
         capital: "Doha",
-        notCapitals: ["Abu az Zuluf", "Ad Dawhah al Jadidah", "Al Ghuwariyah"]
+        notCapitals: ["Abu az Zuluf", "Ad Dawhah", "Al Ghuwariyah"]
     },
     "iraq": {
         question: "The capital city of Iraq is..",
@@ -332,11 +332,11 @@ const ifAnswerCorrect = (e,randNumber) => {
     if (e.target.innerHTML === values[randNumber].capital) {
         answers.classList.add('correctButton')
         answersTwo.classList.add('incorrectButton')
-    answersThree.classList.add('incorrectButton')
-    answersFour.classList.add('incorrectButton')
+        answersThree.classList.add('incorrectButton')
+       answersFour.classList.add('incorrectButton')
         points.innerHTML = ++score;
         let correctAudio = new Audio('correctanswer.mp3')
-        correctAudio.play()
+        correctAudio.play();
         
     }  else {
     //reference the two class lists created in css
@@ -345,7 +345,7 @@ const ifAnswerCorrect = (e,randNumber) => {
     answersThree.classList.add('incorrectButton')
     answersFour.classList.add('incorrectButton')
     let incorrectAudio = new Audio('wronganswer.mp3')
-       incorrectAudio.play()
+       incorrectAudio.play();
        
     }
 }
@@ -360,8 +360,6 @@ const removeStyle = () => {
 // display question on page 
 const getQuestion = () => {
     let randomNumber = Math.round(Math.random() * (48))
-    let randomAnswer = Math.round(Math.random() * (2))
-
     console.log(randomNumber);
     console.log(keys[randomNumber]);
     newQuestion.innerHTML = values[randomNumber].question;

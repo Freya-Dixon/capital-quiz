@@ -180,7 +180,7 @@ var questions = {
     question: "The capital city of Qatar is..",
     flag: "󠁧󠁢󠁥󠁮󠁧🇶🇦",
     capital: "Doha",
-    notCapitals: ["Abu az Zuluf", "Ad Dawhah al Jadidah", "Al Ghuwariyah"]
+    notCapitals: ["Abu az Zuluf", "Ad Dawhah", "Al Ghuwariyah"]
   },
   "iraq": {
     question: "The capital city of Iraq is..",
@@ -355,7 +355,6 @@ var removeStyle = function removeStyle() {
 
 var getQuestion = function getQuestion() {
   var randomNumber = Math.round(Math.random() * 48);
-  var randomAnswer = Math.round(Math.random() * 2);
   console.log(randomNumber);
   console.log(keys[randomNumber]);
   newQuestion.innerHTML = values[randomNumber].question;
