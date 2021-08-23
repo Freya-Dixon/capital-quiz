@@ -388,6 +388,7 @@ var resetGame = function resetGame() {
   newQuestion.innerHTML = 'Capital Quiz';
   points.innerHTML = '0';
   score = 0;
+  alert("Are you sure you want to exit your game?");
 };
 
 reset.addEventListener('click', resetGame);

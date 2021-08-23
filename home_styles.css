@@ -4,30 +4,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 * {
-  background-color: #F8EBDD;
+  background-color: #fafafa;
 }
 
 .container {
   margin: 0 auto;
   width: 80vw;
-  height: 80vh;
+  height: 85vh;
   border-radius: 30px;
   font-family: "Oswald", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("mapbackground.png");
+  background-image: url("homeBackground.png");
   background-size: cover;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: 3px solid salmon;
-  margin-top: 5vh;
+  box-shadow: rgba(241, 122, 25, 0.74) 0px 0px 0px 3px;
+  margin-top: 10vh;
   margin-bottom: 5vh;
 }
 .container .heading {
   margin: 0 auto;
-  font-size: 4em;
-  color: #7D272C;
+  font-size: 6em;
+  color: #2e5237;
   background-color: transparent;
   margin-bottom: 5vh;
   font-family: "Oswald", sans-serif;
@@ -39,7 +38,6 @@
   width: 70vw;
   border-radius: 20px;
   background-color: transparent;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .container p {
   margin: 0 auto;
